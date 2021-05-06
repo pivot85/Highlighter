@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<style>
+.highlight {
+  background-color: yellow;
+}
+</style>
+   
+<body>
+
+<p>Write here</p>
+
+<textarea type="text" id="myInput" oninput="myFunction()"></textarea>
+
+<p id="target"></p>
+
+
+<script>
+
+let toReplace= [{
+    text: ["class","public", "private", "protected", "delegate","virtual","override"], //Class & Access modifiers
+    color: "blue"
+},
+{
+    text: ["string", "int", "double", "long" , "short", "char", "bool" , "byte" , "decimal", "var","let"],  //Data Types
+    color: "green"
+},
+{
+    text: ["{", "}", "(",")","[","]"], //brackets
+    color: "purple"
+    
+},
+
+{
+    text: ["for", "while", "if", "do", "return" , "void" , "static" ,"true" , "false"],  //Data Types
+    color: "rgb(204,204,0)"
+},
+
+{
+    text: ["Mohammed", "mohammed", "Abdulrahman", "abdulrahman" , "Hussien", "hussien", "Saud" , "saud" ,
+           "Mishal", "mishal","Abdullah" , "abdullah"],  //our special keywords
+    color: "salmon"
+}];
+
+function myFunction() {
+  var text = document.getElementById("myInput").value;
+  text = text.replaceAll("\n", "<br>"); //new Line
+  text = processText(text);
+  var y =document.getElementById("target").innerHTML = text;  
+}
+
+function processText(input) {
+    for(let processable of toReplace) {
+        for(let text of processable.text) {
+            input = input.replaceAll(text, `<span style="color: ${processable.color}">${text}</span>`)
+        }
+    }
+    return input;
+}
+
+</script>
+
+</body>
+</html>
+
