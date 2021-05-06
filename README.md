@@ -1,6 +1,6 @@
 # Highlighter
 1- https://raw.githack.com/pivot85/Highlighter/main/highlight.html
-2- 
+2- https://raw.githack.com/pivot85/Highlighter/main/HighlighterV2.html
 ## by :
 
 ### Mohammed Alharbi
