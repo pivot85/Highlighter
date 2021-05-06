@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html> 
+<body>
+    <style>
+body{
+    background-image: url('me.jpg');
+}
+textarea{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;  
+       
+}
+p#target{
+    text-align: center;
+    background-color: white;
+    
+}
+h1{
+    color: white;
+    text-align: center;
+}
+
+    </style>
+<br>
+    
+<h1>Highlitgher</h1>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<textarea type="text" id="myInput" rows="10" cols="50" oninput="myFunction()"></textarea>
+<p id="target"></p>
+<p></p>
+<script>
+let class1= ["Ahmeed","Mohammed","Meshal","Hussain","Saud","Abdulrahman"]
+let class2= ["Class","Public", "Private", "Protected", "Delegate","Virtual","Override"]
+let class3=["0" , "1" ,"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9"]
+function myFunction() {
+  var text = document.getElementById("myInput").value;
+  text = text.replaceAll("\n", "<br>");
+  text=Class1(text);
+  text=Class2(text);
+  text=Class3(text);
+  var y =document.getElementById("target").innerHTML = text; 
+}
+function Class1(input) {
+    let txt="";
+    let arrayC= true;
+    let res = input.split(" ")
+    for(let word of res){
+        for(let item of class1) {
+        if (word==item) {
+            word = word.replaceAll(word, `<span style="color:red">${word}</span>`)
+            txt+=" " + word 
+            arrayC =false ;
+    }  
+    }
+        if (arrayC) {
+            txt+=" " + word;
+        }
+        arrayC= true;
+    }
+  return txt
+}
+function Class2(input) {
+    let txt="";
+    let arrayC= true;
+    let res = input.split(" ")
+    for(let word of res){
+        for(let item of class2) {
+        if (word==item) {
+            word = word.replaceAll(word, `<span style="color:blue">${word}</span>`)
+            txt+=" " + word 
+            arrayC =false ;
+    }  
+    }
+        if (arrayC) {
+            txt+=" " + word;
+        }
+        arrayC= true;
+    }
+  return txt
+}
+function Class3(input) {
+    let txt="";
+    let arrayC= true;
+    let res = input.split(" ")
+    for(let word of res){
+        for(let item of class3) {
+        if (word==item) {
+            word = word.replaceAll(word, `<span style="color:green">${word}</span>`)
+            txt+=" " + word 
+            arrayC =false ;
+    }  
+    }
+        if (arrayC) {
+            txt+=" " + word;
+        }
+        arrayC= true;
+    }
+  return txt
+}
+</script>
+</body>
+</html>
