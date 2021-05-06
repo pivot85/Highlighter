@@ -12,6 +12,15 @@
            "Mishal", "mishal","Abdullah" , "abdullah"
 
 ------------------------------------------------------------------------------------------------------------------------------
+## Key words for the second application only:
+
+"Ahmeed","Mohammed","Meshal","Hussain","Saud","Abdulrahman"
+
+"Class","Public", "Private", "Protected", "Delegate","Virtual","Override"
+
+0,1,2,3,4,5,6,7,8,9
+
+------------------------------------------------------------------------------------------------------------------------------
 ## by :
 
 ### Mohammed Alharbi
